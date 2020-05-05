@@ -67,6 +67,9 @@ class DetailsViewController: UIViewController, UITextFieldDelegate {
                 //MARK: If user exists then populate the UI
                  self.populateUI(value: value)
             }
+            //MARK: Hides activity indicator
+            self.activityIndicator.isHidden = true
+            self.activityIndicator.stopAnimating()
         })
     }
     
@@ -96,10 +99,6 @@ class DetailsViewController: UIViewController, UITextFieldDelegate {
             let image = UIImage(data: decodedData)
             self.profileImageView.image = image
         }
-        
-        //MARK: Hides activity indicator
-        self.activityIndicator.isHidden = true
-        self.activityIndicator.stopAnimating()
     }
     
     @IBAction func browseClicked(_ sender: UIButton) {
