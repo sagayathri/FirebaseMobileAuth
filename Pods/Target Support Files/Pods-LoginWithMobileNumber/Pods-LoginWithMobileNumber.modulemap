@@ -1,0 +1,6 @@
+framework module Pods_LoginWithMobileNumber {
+  umbrella header "Pods-LoginWithMobileNumber-umbrella.h"
+
+  export *
+  module * { export * }
+}
